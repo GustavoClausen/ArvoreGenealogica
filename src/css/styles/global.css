@@ -70,4 +70,8 @@ body {
     .modal-dialog {
         max-height: 90vh;
     }
+    div.no-child-add::after,
+    div.last-card-person::before {
+        opacity: 1;
+    }
 }
