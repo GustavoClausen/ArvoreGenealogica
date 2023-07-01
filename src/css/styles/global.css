@@ -1,0 +1,44 @@
+:root {
+    --color-background-page: #D8FFDB;
+    --color-background-container: #008F8C;
+    --color-background-hover: rgba(255, 255, 255, 0.747);
+    --color-background-btn-add:#a1a1a13a;
+    --color-background-btn-add-hover: #A9ABAB;
+    --color-background-card: #fff;
+    --color-background-modal: #0000004d;
+    --color-btn-modal: #DEEFE7;
+    --color-btn-modal-background: #002333ea;
+    --color-btn-modal-background-hover: #b2bebf8f;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-red: #bd2a2e;
+    --color-red-hover: #bd2a2f27;
+    --color-black-shadow: #00000023;
+    --color-border: #e1e1e1;
+    --color-man: #023d74ff;
+    --color-woman: #720303ff;
+    --color-generic-person: #525252f1;
+    --color-background-tree: #dddfdf;
+    --color-tree-line-conection: #545659;
+    --color-modal-border: #B2BEBF;
+    --padding-top: 1.5rem;
+    --border-radius-card: .8rem;
+    --box-shadow: -.3rem .3rem .5rem var(--color-black-shadow);
+    --box-shadow-input: 0 0 .5rem var(--color-black-shadow);
+    --transition-background-color: 130ms;
+    --transition-opacity: 130ms;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    background-color: var(--color-background-tree);
+}
+.container {
+    position: relative;
+    margin: 0 auto;
+}

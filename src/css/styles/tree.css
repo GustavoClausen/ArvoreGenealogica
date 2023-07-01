@@ -1,0 +1,133 @@
+.container-tree {
+    min-width: fit-content;
+    padding: 6rem;
+    padding-bottom: 8rem;
+    margin: 0 auto;
+}
+.gen {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+.entry-gen-root > .card-container::before {
+    content: none;
+}
+.card-container::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    height: 2rem;
+    border-left: .18rem solid var(--color-tree-line-conection);
+    bottom: -2rem;
+}
+.card-container::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    height: 2rem;
+    border-left: .18rem solid var(--color-tree-line-conection);
+    top: -2rem;
+}
+.entry-gen {
+    position: relative;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.entry-gen:only-child {
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+.entry-gen.no-child > .card-container::after {
+    content: none;
+}
+.entry-gen-root.no-child > .card-container::after {
+    content: none;
+}
+.entry-gen:first-child::before {
+    position: absolute;
+    content: "";
+    top: -2rem;
+    width: calc(50% + 6rem);
+    left: 50%;
+    height: 2rem;
+    border-top: .18rem solid var(--color-tree-line-conection);
+    border-left: .18rem solid var(--color-tree-line-conection);
+    border-top-left-radius: 1rem;
+}
+.entry-gen:nth-last-child(1):before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -2rem;
+    width: 50%;
+    right: 50%;
+    height: 2rem;
+    border-top: .18rem solid var(--color-tree-line-conection);
+    border-right: .18rem solid var(--color-tree-line-conection);
+    border-top-right-radius: 1rem;
+}
+.entry-gen:nth-last-child(1) > .card-container::before,
+.entry-gen:first-child > .card-container::before
+{
+    content: none;
+}
+.entry-gen:only-child::before {
+    content: "";
+    width: 0;
+    left: 50%;
+    border-right: none;
+    border-left: .18rem solid var(--color-tree-line-conection);
+}
+.entry-gen::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -2rem;
+    width: calc(100% + 6rem);
+    right: 50%;
+    height: 2rem;
+    border-top: .18rem solid var(--color-tree-line-conection);
+}
+.last-card-person,
+.no-child-add {
+    position: relative;
+    cursor: pointer;
+}
+.last-card-person:hover::before,
+.no-child-add:hover::after {
+    opacity: 1;
+}
+.last-card-person::before,
+.no-child-add::after {
+    position: absolute;
+    left: calc(50% + 6rem);
+    top: -9rem;
+    content: url('../../icons/add-icon.svg');
+    width: 2rem;
+    height: 2rem;
+    padding: .8rem;
+    background-color: var(--color-background-btn-add);
+    border-radius: 100%;
+    opacity: 0;
+    transition: opacity var(--transition-opacity) ease-in-out;
+}
+.no-child-add::after {
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 1rem;
+}
+.card-container:hover ~ .no-child-add::after {
+    opacity: 1;
+}
+.entry-gen:hover .card-container:hover ~ .last-card-person::before {
+    opacity: 1;
+}
+.card-container:hover ~ .last-card-person::before {
+    opacity: 1;
+}
+div.no-child-add.hidden {
+    display: none;
+}

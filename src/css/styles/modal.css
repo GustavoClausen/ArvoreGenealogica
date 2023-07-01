@@ -1,0 +1,198 @@
+.container-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-background-modal);
+    transition: opacity var(--transition-background-color) linear;
+    opacity: 0;
+    z-index: 1;
+    display: none;
+}
+.modal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.modal-dialog {
+    position: absolute;
+    opacity: 0;
+    width: 50rem;
+    height: 50rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-card);
+    transition: opacity 200ms linear;
+    padding: 2rem;
+}
+.container-close-modal {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 1rem;
+    border-bottom: .1rem solid var(--color-modal-border);
+}
+.close {
+    display: flex;
+    padding: .4rem;
+    border-radius: var(--border-radius-card);
+    border: .1rem solid var(--color-red);
+    transition: background-color var(--transition-background-color) ease-in-out;
+    cursor: pointer;
+}
+.close:hover {
+    background-color: var(--color-red-hover);
+}
+.close-img {
+    width: 1.4rem;
+}
+.infos-modal {
+    position: relative;
+    padding-top: 2rem;
+    height: 100%;
+}
+.container-nome {
+    margin-bottom: 2.5rem;
+}
+.container-date-place-birth {
+    display: flex;
+    width: 100%;
+}
+.container-birth-place,
+.container-birth-date {
+    width: 50%;
+}
+.container-birth-place {
+    margin-right: 2rem;
+}
+.container-birth-date {
+    margin-left: 2rem;
+}
+.dsp-none {
+    display: none;
+    opacity: 0;
+    transition: opacity var(--transition-opacity) linear;
+}
+input, select {
+    width: 100%;
+    transition: box-shadow 100ms linear;
+    transition: border 100ms linear;
+    font-size: 1.2rem;
+}
+#input-name::placeholder,
+select,
+#input-birth-date {
+    opacity: .6;
+    font-size: 1.2rem;
+}
+input:focus, select:focus, button:focus {
+    box-shadow: var(--box-shadow-input);
+    outline: 0;
+    border: .1rem solid var(--color-tree-line-conection);
+}
+label {
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-btn-modal-background);
+}
+label, input {
+    display: block;
+}
+input, select {
+    margin-bottom: 1rem;
+    height: 3rem;
+    padding: .4rem;
+    border: .1rem solid var(--color-modal-border);
+    border-radius: .4rem;
+}
+option {
+    font-size: 1.2rem;
+}
+.container-btn {
+    display: flex;
+    bottom: 3.5rem;
+    position: absolute;
+    width: 100%;
+    gap: 1rem;
+}
+.container-sex {
+    width: 100%;
+    padding-top: 1.5rem;
+}
+.container-sex div {
+    display: flex;
+}
+.container-sex div input {
+    width: 2rem;
+    height: 2rem;
+}
+.container-sex div input:focus {
+    box-shadow: none;
+}
+.container-sex div label {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+}
+.invalidItem {
+    color: var(--color-red);
+    margin-top: -.5rem;
+    font-size: 1.1rem;
+}
+button#edit, 
+button#addRootEntry,
+button#addBrotherEntry,
+button#addChildEntry {
+    width: 50%;
+    padding: 1rem;
+    border: .1rem solid var(--color-btn-modal-background);
+    border-radius: .4rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--color-btn-modal);
+    background-color: var(--color-btn-modal-background);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-background-color) linear;
+}
+button#create,
+button#addRootEntry,
+button#addBrotherEntry,
+button#addChildEntry {
+    width: 100%;
+}
+button#edit:hover,
+button#edit:focus,
+button#create:hover,
+button#create:focus,
+button#addRootEntry:focus,
+button#addBrotherEntry:focus,
+button#addChildEntry:focus,
+button#addRootEntry:hover,
+button#addBrotherEntry:hover,
+button#addChildEntry:hover{
+    background-color: var(--color-btn-modal-background-hover);
+    color: var(--color-btn-modal-background);
+}
+button#delete {
+    width: 50%;
+    padding: 1rem;
+    border: .1rem solid var(--color-red);
+    border-radius: .4rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--color-red);
+    background-color: var(--color-white);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-background-color) linear;
+}
+button#delete:hover,
+button#delete:focus {
+    background-color: var(--color-red-hover);
+}

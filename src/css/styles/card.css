@@ -1,0 +1,98 @@
+.card-container {
+    position: relative;
+    background-color: var(--color-background-card);
+    width: 10rem;
+    height: 16rem;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--box-shadow);
+    transition: all var(--transition-background-color) ease-out;
+    cursor: pointer;
+}
+.card-img {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+}
+.img {
+    justify-content: center;
+    width: 6.5rem;
+    margin: 1.5rem auto auto auto;
+}
+.card-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    padding: .7rem;
+}
+.card-name .name {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+.card-flag-birth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
+.birth-date {
+    font-size: 1rem;
+}
+.container-flag {
+    display: flex;
+    width: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: .7rem;
+}
+.container-flag .flag {
+    width: 1.5rem;
+}
+.container-card-end-line {
+    position: relative;
+    height: 1rem;
+    border-radius: 0 0 var(--border-radius-card) var(--border-radius-card);
+    overflow: hidden;
+}
+.card-end-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: .55rem;
+    width: 100%;
+}
+.card-end-line.generic-person {
+    background-color: var(--color-generic-person);
+}
+.card-end-line.man {
+    background-color: var(--color-man);
+}
+.card-end-line.woman {
+    background-color: var(--color-woman);
+}
+.card-container:hover {
+    background-color: var(--color-background-hover);
+}
+.card-container.add-root-infos::after {
+    content: none;
+}
+.container-root-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.root-icon {
+    padding: 1rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    background-color: var(--color-background-btn-add);
+    transition: background-color var(--transition-background-color) ease-in-out;
+}
