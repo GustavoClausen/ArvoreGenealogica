@@ -42,3 +42,32 @@ body {
     position: relative;
     margin: 0 auto;
 }
+@media (max-width: 450px)
+{
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 7px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .modal-dialog {
+        max-width: 90vw;
+    }
+    
+}
+@media (max-width: 768px) {
+    div.no-child-add::after,
+    div.last-card-person::before {
+        opacity: 1;
+    }
+}
+@media (orientation: landscape) and (max-width: 1024px)
+{
+    * {
+        font-size: 6px;
+    }
+    .modal-dialog {
+        max-height: 90vh;
+    }
+}
