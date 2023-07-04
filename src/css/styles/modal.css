@@ -87,7 +87,11 @@ select,
     opacity: .6;
     font-size: 1.2rem;
 }
-input:focus, select:focus, button:focus {
+input:focus,
+select:focus,
+button:focus,
+#maleRadio:focus,
+#femaleRadio:focus {
     box-shadow: var(--box-shadow-input);
     outline: 0;
     border: .1rem solid var(--color-tree-line-conection);
@@ -118,26 +122,6 @@ option {
     position: absolute;
     width: 100%;
     gap: 1rem;
-}
-.container-sex {
-    width: 100%;
-    padding-top: 1.5rem;
-}
-.container-sex div {
-    display: flex;
-}
-.container-sex div input {
-    width: 2rem;
-    height: 2rem;
-}
-.container-sex div input:focus {
-    box-shadow: none;
-}
-.container-sex div label {
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-    height: 2rem;
 }
 .invalidItem {
     color: var(--color-red);
@@ -195,4 +179,48 @@ button#delete {
 button#delete:hover,
 button#delete:focus {
     background-color: var(--color-red-hover);
+}
+.container-sex {
+    width: 100%;
+    padding-top: 1.5rem;
+}
+.container-sex div {
+    display: flex;
+}
+.container-sex div input {
+    width: 2rem;
+    height: 2rem;
+}
+.container-sex div input:focus {
+    box-shadow: none;
+}
+.container-sex div label {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    cursor: pointer;
+}
+#maleRadio,
+#femaleRadio {
+    appearance: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+    cursor: pointer;
+}
+#maleRadio::after,
+#femaleRadio::after {
+    position: relative;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: .2rem;
+    transition: all var(--transition-background-color) linear;
+}
+#maleRadio:checked::after,
+#femaleRadio:checked::after {
+    background-color: var(--color-btn-modal-background);
 }
